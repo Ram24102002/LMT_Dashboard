@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    
+    <!-- fontawsome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RD-D6qOKEzNbsWfnBUjSfQv4GYF3jBJloA&s">
+    <link rel="stylesheet" href="index.css">
+    <title>LMT Dashboard</title>
+</head>
+<body>
+ 
+
+
+
+    <nav class="navbar  navbar-expand-lg bg-dark "  data-bs-theme="dark">
+        <div class="container">
+
+          
+          <a class="navbar-brand text-warning " href="#" style="cursor: context-menu;"><b>LMT Dashboard</b></a>
+          <!-- <a class="navbar-brand" href="#">
+           
+        </a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+
+              <a class="nav-link" onclick="window.open('https://amazon.awsapps.com/workdocs-preview/index.html#/');">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMjEuNDYzIiB2aWV3Qm94PSIwIDAgMTQwIDIxLjQ2MyI+CiAgPGcgaWQ9Ikdyb3VwXzM1NzUiIGRhdGEtbmFtZT0iR3JvdXAgMzU3NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTk2OSAtMTAzNC42NCkiPgogICAgPGcgaWQ9Ikdyb3VwXzIxNzMiIGRhdGEtbmFtZT0iR3JvdXAgMjE3MyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTY5IDEwMzguNjMzKSI+CiAgICAgIDxnIGlkPSJHcm91cF8yMTI0IiBkYXRhLW5hbWU9Ikdyb3VwIDIxMjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDguMTU3IDEwLjU0MSkiPgogICAgICAgIDxwYXRoIGlkPSJQYXRoXzIzOTAiIGRhdGEtbmFtZT0iUGF0aCAyMzkwIiBkPSJNNTYuMjU4LDMzLjk3MUEyMi4wNjcsMjIuMDY3LDAsMCwxLDQzLjgsMzcuNzc4YTIyLjU0NiwyMi41NDYsMCwwLDEtMTUuMjE3LTUuOGMtLjMxNS0uMjg0LS4wMzQtLjY3NC4zNDUtLjQ1M2EzMC42MjgsMzAuNjI4LDAsMCwwLDE1LjIyNiw0LjA0LDMwLjMsMzAuMywwLDAsMCwxMS42MTQtMi4zNzdDNTYuMzM4LDMyLjk0Miw1Ni44MTUsMzMuNTU5LDU2LjI1OCwzMy45NzFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjguNDQ5IC0zMC44NDkpIiBmaWxsPSIjZjVmN2Y5Ii8+CiAgICAgICAgPHBhdGggaWQ9IlBhdGhfMjM5MSIgZGF0YS1uYW1lPSJQYXRoIDIzOTEiIGQ9Ik02NS42OTMsMzUuOTk0Yy0uMTIzLjMwNy4xNDIuNDMyLjQxOS4yLDEuODA2LTEuNTEyLDIuMjc0LTQuNjc5LDEuOS01LjEzNnMtMy41MjctLjg0NS01LjQ1NS41MWMtLjMuMjA4LS4yNDUuNS4wODMuNDU1LDEuMDg2LS4xMywzLjUtLjQyLDMuOTM0LjEzMlM2Ni4xLDM0Ljk3OSw2NS42OTMsMzUuOTk0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM3LjM2OCAtMzAuNjMzKSIgZmlsbD0iI2Y1ZjdmOSIvPgogICAgICA8L2c+CiAgICAgIDxnIGlkPSJHcm91cF8yMTI1IiBkYXRhLW5hbWU9Ikdyb3VwIDIxMjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPgogICAgICAgIDxwYXRoIGlkPSJQYXRoXzIzOTIiIGRhdGEtbmFtZT0iUGF0aCAyMzkyIiBkPSJNNjMuMDY5LDE4LjY2MmgzLjA4Mkw2Mi42MTIsMjMuNzRhMS41ODUsMS41ODUsMCwwLDAtLjIyLjl2MS4zMzVjMCwuMTk0LjIxNC40MTQuNDIuMzA1YTYuNzkyLDYuNzkyLDAsMCwxLDYuMjMxLS4wMTJjLjIyMy4xMTYuNDM0LS4xMDcuNDM0LS4zdi0xLjRhLjYuNiwwLDAsMC0uMzEyLS41MTQsNi41MzksNi41MzksMCwwLDAtMy4zNjQtLjcyMmwzLjA1NS00LjM2MmExLjg0NCwxLjg0NCwwLDAsMCwuNDQ0LS44MjhWMTcuMDEzYS4zMjkuMzI5LDAsMCwwLS4zNDEtLjMzMmgtNS45YS4zMjUuMzI1LDAsMCwwLS4zMzMuMzMzdjEuMzE2QS4zMjcuMzI3LDAsMCwwLDYzLjA2OSwxOC42NjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjkuMjE4IC0xNi40MjMpIiBmaWxsPSIjZjVmN2Y5Ii8+CiAgICAgICAgPHBhdGggaWQ9IlBhdGhfMjM5MyIgZGF0YS1uYW1lPSJQYXRoIDIzOTMiIGQ9Ik0zMy4yNTEsMjYuMTU4VjIxLjI3NmMwLTEuMDY2LS4wNTEtMi41MzgsMS4yMzktMi41MzgsMS4yNzMsMCwxLjEwNiwxLjUxMiwxLjEwNiwyLjUzOHY0Ljg4MmEuMzM3LjMzNywwLDAsMCwuMzIzLjMzMWgxLjc5MmEuMzM5LjMzOSwwLDAsMCwuMzQ2LS4zMzJWMjEuMjc2YTUuNTY3LDUuNTY3LDAsMCwxLC4xNjctMS43NjMsMS4xOSwxLjE5LDAsMCwxLDEuMDcyLS43NTYuOTM2LjkzNiwwLDAsMSwxLjA1NS43OTUsMTEuNzUzLDExLjc1MywwLDAsMSwuMDUsMS43MjV2NC44ODJhLjMzNi4zMzYsMCwwLDAsLjMyMi4zMzFoMS43OTJhLjMzOS4zMzksMCwwLDAsLjM0Ni0uMzMyVjIwLjM0NmE0Ljg4Myw0Ljg4MywwLDAsMC0uNDUzLTIuODg3LDIuNjUsMi42NSwwLDAsMC00LjU1Ni43LDIuNDY1LDIuNDY1LDAsMCwwLTQuNjksMGgtLjAzM3YtMS4yYS4zMzkuMzM5LDAsMCwwLS4zMjctLjMxSDMxLjEzN2EuMzM4LjMzOCwwLDAsMC0uMzQ2LjMzMnY5LjIwOWEuMzM4LjMzOCwwLDAsMCwuMzIxLjNIMzIuOUEuMzM4LjMzOCwwLDAsMCwzMy4yNTEsMjYuMTU4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwLjkwOCAtMTYuMzYzKSIgZmlsbD0iI2Y1ZjdmOSIvPgogICAgICAgIDxwYXRoIGlkPSJQYXRoXzIzOTQiIGRhdGEtbmFtZT0iUGF0aCAyMzk0IiBkPSJNNzcuMjEzLDE2LjQ1MWMtMi42LDAtNC4wMzcsMi4yMjktNC4wMzcsNS4xLDAsMi44NDksMS40MjQsNS4xMzYsNC4wMzcsNS4xMzYsMi41MTMsMCw0LjEtMi4yMjksNC4xLTUuMDM4QzgxLjMxNiwxOC43MzgsNzkuODc2LDE2LjQ1MSw3Ny4yMTMsMTYuNDUxWm0wLDguMzMzYy0xLjQwNywwLTEuMzktMi40LTEuMzktMy41MjdzLjA4My0yLjkyNiwxLjQwNy0yLjkyNmExLjEyNCwxLjEyNCwwLDAsMSwxLjE3My44OTEsOC41MjMsOC41MjMsMCwwLDEsLjI2OCwyLjQ0MkM3OC42NywyMi44NDYsNzguNiwyNC43ODQsNzcuMjEzLDI0Ljc4NFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMi4wNTQgLTE2LjM2MykiIGZpbGw9IiNmNWY3ZjkiLz4KICAgICAgICA8cGF0aCBpZD0iUGF0aF8yMzk1IiBkYXRhLW5hbWU9IlBhdGggMjM5NSIgZD0iTTg4LjUsMjYuMTU4VjIxLjJhNC4wOTEsNC4wOTEsMCwwLDEsLjI4NS0xLjc0NCwxLjE3MywxLjE3MywwLDAsMSwxLjAzOC0uNzM2YzEuMjM5LDAsMS4xMjIsMS40NzMsMS4xMjIsMi40OHY1YS4zNC4zNCwwLDAsMCwuMzIuMjloMS44YS4zNC4zNCwwLDAsMCwuMzQ0LS4yOVYyMC40YTUuODYyLDUuODYyLDAsMCwwLS40NjktMi44NjgsMi4zNTQsMi4zNTQsMCwwLDAtMi4wOTQtMS4wODZBMi40NDEsMi40NDEsMCwwLDAsODguNCwxOC4zMTJoLS4wMzNWMTYuOWEuMzQxLjM0MSwwLDAsMC0uMzE5LS4yNThIODYuMzg1YS4zNC4zNCwwLDAsMC0uMzQ1LjNsMCw5LjIxMmEuMzM3LjMzNywwLDAsMCwuMzIyLjMzMWgxLjc4N0EuMzQzLjM0MywwLDAsMCw4OC41LDI2LjE1OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNS40MzYgLTE2LjM2MykiIGZpbGw9IiNmNWY3ZjkiLz4KICAgICAgICA8cGF0aCBpZD0iUGF0aF8yMzk2IiBkYXRhLW5hbWU9IlBhdGggMjM5NiIgZD0iTTU3Ljc3OCwyNC43N2EyLjQ0OSwyLjQ0OSwwLDAsMS0uNjc3LTEuNjYzdi0yLjhjMC0xLjE4NC4wODQtMi4yNzItLjc4OS0zLjA4N2E0LjA3LDQuMDcsMCwwLDAtMi43LS44OTNjLTEuNzA4LDAtMy42MTMuNjM3LTQuMDEyLDIuNzQ3YS4zMTUuMzE1LDAsMCwwLC4yNjguMzc1bDEuNzM5LjE4OGEuMzc4LjM3OCwwLDAsMCwuMzEyLS4zMjksMS4zNjcsMS4zNjcsMCwwLDEsMS40NDItMS4wNzgsMS4yLDEuMiwwLDAsMSwxLjAwNy40NjYsMi4zLDIuMywwLDAsMSwuMjE4LDEuM3YuMjMzYTEyLjM5MiwxMi4zOTIsMCwwLDAtMy4zNzMuNjIxQTMuMDQ4LDMuMDQ4LDAsMCwwLDQ5LjMsMjMuNzg4YTIuNTQ2LDIuNTQ2LDAsMCwwLDIuNjg2LDIuOCwzLjU1NiwzLjU1NiwwLDAsMCwyLjk1OC0xLjMsNC4zNzIsNC4zNzIsMCwwLDAsMS4wMjksMS4yLjM3MS4zNzEsMCwwLDAsLjQyNC0uMDQxbDAsMGMuMzU5LS4zMTksMS4wMS0uODg0LDEuMzc2LTEuMTkyQS4zMzcuMzM3LDAsMCwwLDU3Ljc3OCwyNC43N1ptLTMuMi0yLjcxYTMuNTIsMy41MiwwLDAsMS0uMzM1LDEuOSwxLjQ1NiwxLjQ1NiwwLDAsMS0xLjI0Mi44MTZjLS42ODgsMC0xLjA5Mi0uNTI1LTEuMDkyLTEuMywwLTEuNTI5LDEuMzcxLTEuODA2LDIuNjY5LTEuODA2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1Ljc3NCAtMTYuMzMxKSIgZmlsbD0iI2Y1ZjdmOSIvPgogICAgICAgIDxwYXRoIGlkPSJQYXRoXzIzOTciIGRhdGEtbmFtZT0iUGF0aCAyMzk3IiBkPSJNMjUuODY1LDI0Ljc3YTIuNDQ5LDIuNDQ5LDAsMCwxLS42NzctMS42NjN2LTIuOGMwLTEuMTg0LjA4NC0yLjI3Mi0uNzg5LTMuMDg3YTQuMDcyLDQuMDcyLDAsMCwwLTIuNy0uODkzYy0xLjcwOCwwLTMuNjEzLjYzNy00LjAxMiwyLjc0N2EuMzE2LjMxNiwwLDAsMCwuMjY4LjM3NWwxLjczOS4xODhBLjM3OC4zNzgsMCwwLDAsMjAsMTkuMzEyYTEuMzY2LDEuMzY2LDAsMCwxLDEuNDQyLTEuMDc4LDEuMiwxLjIsMCwwLDEsMS4wMDcuNDY2QTIuMywyLjMsMCwwLDEsMjIuNjcsMjB2LjIzM2ExMi4zODYsMTIuMzg2LDAsMCwwLTMuMzczLjYyMSwzLjA0OCwzLjA0OCwwLDAsMC0xLjkxNCwyLjkzMywyLjU0NiwyLjU0NiwwLDAsMCwyLjY4NiwyLjgsMy41NTcsMy41NTcsMCwwLDAsMi45NTgtMS4zLDQuMzY4LDQuMzY4LDAsMCwwLDEuMDI4LDEuMi4zNzEuMzcxLDAsMCwwLC40MjQtLjA0MWwwLDBjLjM1OC0uMzE5LDEuMDEtLjg4NCwxLjM3Ni0xLjE5MkEuMzM5LjMzOSwwLDAsMCwyNS44NjUsMjQuNzdabS0zLjItMi43MWEzLjUxNCwzLjUxNCwwLDAsMS0uMzM2LDEuOSwxLjQ1NSwxLjQ1NSwwLDAsMS0xLjI0Mi44MTZjLS42ODgsMC0xLjA5MS0uNTI1LTEuMDkxLTEuMywwLTEuNTI5LDEuMzcxLTEuODA2LDIuNjY5LTEuODA2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE3LjM4MiAtMTYuMzMxKSIgZmlsbD0iI2Y1ZjdmOSIvPgogICAgICA8L2c+CiAgICA8L2c+CiAgICA8cGF0aCBpZD0iUGF0aF8zMDYyIiBkYXRhLW5hbWU9IlBhdGggMzA2MiIgZD0iTTUuMTg0LDI4LjQzSDQuMjcxYS42MjEuNjIxLDAsMCwxLS40LS4xLDEsMSwwLDAsMS0uMjMzLS40MTlMLjg4LDE5LjY3MXEtLjA3NS0uMi0uMDkzLS4yOGEuNjEzLjYxMywwLDAsMS0uMDE5LS4xNDlxMC0uMjYxLjI4LS4yNjFIMi4xMWEuNjU3LjY1NywwLDAsMSwuNDE5LjEuODkuODksMCwwLDEsLjIxNC40MTlsMi4wMzEsNy4wNDRMNi42MzgsMTkuNWEuODkuODksMCwwLDEsLjIxNC0uNDE5LjY1Ny42NTcsMCwwLDEsLjQxOS0uMWguODU3YS43LjcsMCwwLDEsLjQyOS4xLjc0OS43NDksMCwwLDEsLjIuNDE5bDEuODgyLDcuMTM3TDEyLjczMSwxOS41YS44OS44OSwwLDAsMSwuMjE0LS40MTkuNjU3LjY1NywwLDAsMSwuNDE5LS4xaDEuMDA2cS4yOCwwLC4yOC4yNjFhLjYxMy42MTMsMCwwLDEtLjAxOS4xNDlxLS4wMTkuMDc1LS4wOTMuMjhsLTIuODMyLDguMjM3YTEsMSwwLDAsMS0uMjMzLjQxOS42MjEuNjIxLDAsMCwxLS40LjFIMTAuMTZhLjU4My41ODMsMCwwLDEtLjQxOS0uMTIxLDEuMDQsMS4wNCwwLDAsMS0uMjE0LS40MTlMNy42NjMsMjEuMDMyLDUuODE4LDI3Ljg4OWEuODUuODUsMCwwLDEtLjIuNDE5QS42Mi42MiwwLDAsMSw1LjE4NCwyOC40M1ptMTQuNzIxLjI4YTQuMjY2LDQuMjY2LDAsMCwxLTMuMy0xLjMxNEE1LjI1Niw1LjI1NiwwLDAsMSwxNS40LDIzLjdhNS4yMjEsNS4yMjEsMCwwLDEsMS4yMTEtMy42OSw0LjI4MSw0LjI4MSwwLDAsMSwzLjMtMS4zLDQuMjc1LDQuMjc1LDAsMCwxLDMuMzA4LDEuMyw1LjI0Niw1LjI0NiwwLDAsMSwxLjIsMy42OSw1LjI4Miw1LjI4MiwwLDAsMS0xLjIsMy43QTQuMjU5LDQuMjU5LDAsMCwxLDE5LjkwNiwyOC43MDlabTAtMS40OTFhMi4zMzUsMi4zMzUsMCwwLDAsMS45NTctLjg1Nyw0LjMxMSw0LjMxMSwwLDAsMCwuNjcxLTIuNjY1LDQuMjc0LDQuMjc0LDAsMCwwLS42NzEtMi42NDYsMi4zMzUsMi4zMzUsMCwwLDAtMS45NTctLjg1NywyLjMzNSwyLjMzNSwwLDAsMC0xLjk1Ny44NTcsNC4yNzQsNC4yNzQsMCwwLDAtLjY3MSwyLjY0Niw0LjMxMSw0LjMxMSwwLDAsMCwuNjcxLDIuNjY1QTIuMzM1LDIuMzM1LDAsMCwwLDE5LjkwNiwyNy4yMThabTguMDY5LDEuMjExaC0xLjFhLjMyOS4zMjksMCwwLDEtLjM3My0uMzczdi04LjdhLjMyOS4zMjksMCwwLDEsLjM3My0uMzczaC44MmEuMzg1LjM4NSwwLDAsMSwuNDI5LjM1NGwuMTMsMS4wNDRhNi4xNDgsNi4xNDgsMCwwLDEsMS4zLTEuMDcxLDMuMDMxLDMuMDMxLDAsMCwxLDEuNTg0LS40aC4ycS4wNzUsMCwuMjQyLjAxOWEuMzExLjMxMSwwLDAsMSwuMzE3LjMzNXYxLjAwNmEuMy4zLDAsMCwxLS4zMzUuMzM1LDIuNTU3LDIuNTU3LDAsMCwxLS4zMTctLjAxOSwyLjksMi45LDAsMCwwLS4zNTQtLjAxOSw0LjAyMyw0LjAyMywwLDAsMC0xLjQuMjMzLDMuOTYxLDMuOTYxLDAsMCwwLTEuMTU1LjY2MnY2LjZBLjMyOS4zMjksMCwwLDEsMjcuOTc1LDI4LjQzWm02Ljc2NCwwaC0xLjFhLjMyOS4zMjksMCwwLDEtLjM3My0uMzczVjE1LjAxM2EuMzI5LjMyOSwwLDAsMSwuMzczLS4zNzNoMS4xYS4zMjkuMzI5LDAsMCwxLC4zNzMuMzczVjIzLjFsMy44MzktMy44NzZhLjgxNC44MTQsMCwwLDEsLjI3LS4xODYsMS4wNTYsMS4wNTYsMCwwLDEsLjM4Mi0uMDU2SDQwLjhxLjI4LDAsLjI4LjIyNGEuNDI5LjQyOSwwLDAsMS0uMTQ5LjNMMzYuOSwyMy40NzNsNC4zNDIsNC40MzVhLjQzLjQzLDAsMCwxLC4xNDkuM3EwLC4yMjQtLjI4LjIyNGgtMS4zYS45NDIuOTQyLDAsMCwxLS40LS4wNzUuNzIuNzIsMCwwLDEtLjI1Mi0uMTg2bC00LjA0NC00LjIxMXY0LjFBLjMyOS4zMjksMCwwLDEsMzQuNzM5LDI4LjQzWm0xMS4yLjJhMy43MDcsMy43MDcsMCwwLDEtMi4xMDYtLjYsMy44MzUsMy44MzUsMCwwLDEtMS4zNzktMS43LDYuMzgzLDYuMzgzLDAsMCwxLS40ODUtMi41OSw2LjYyOSw2LjYyOSwwLDAsMSwuNDk0LTIuNjc0LDQuMDM0LDQuMDM0LDAsMCwxLDEuNC0xLjc1MiwzLjY2MSwzLjY2MSwwLDAsMSwyLjEzNC0uNjI0LDQuMzY5LDQuMzY5LDAsMCwxLDIuODUxLDEuMDQ0VjE1LjAxM2EuMzI5LjMyOSwwLDAsMSwuMzczLS4zNzNoMS4xYS4zMjkuMzI5LDAsMCwxLC4zNzMuMzczVjI4LjA1N2EuMzI5LjMyOSwwLDAsMS0uMzczLjM3M0g0OS41YS40MDguNDA4LDAsMCwxLS4zLS4wOTMuNTM1LjUzNSwwLDAsMS0uMTMtLjI4bC0uMTQ5LS42YTQuNTEyLDQuNTEyLDAsMCwxLTEuNC44NjdBNC4zLDQuMywwLDAsMSw0NS45MzgsMjguNjM1Wm0uNTU5LTEuNDkxYTQuMDI1LDQuMDI1LDAsMCwwLDIuMzQ4LS44NTdWMjEuMDEzYTQuMTg0LDQuMTg0LDAsMCwwLTEuMTY1LS42MjQsNC4wNzYsNC4wNzYsMCwwLDAtMS4zLS4ycS0yLjUzNCwwLTIuNTM0LDMuNVE0My44NTEsMjcuMTQ0LDQ2LjUsMjcuMTQ0Wm0xMC43ODksMS41NjVhNC4yNjYsNC4yNjYsMCwwLDEtMy4zLTEuMzE0LDUuMjU2LDUuMjU2LDAsMCwxLTEuMjExLTMuNyw1LjIyMSw1LjIyMSwwLDAsMSwxLjIxMS0zLjY5LDQuODM0LDQuODM0LDAsMCwxLDYuNjA2LDAsNS4yNDYsNS4yNDYsMCwwLDEsMS4yLDMuNjksNS4yODIsNS4yODIsMCwwLDEtMS4yLDMuN0E0LjI1OSw0LjI1OSwwLDAsMSw1Ny4yODcsMjguNzA5Wm0wLTEuNDkxYTIuMzM1LDIuMzM1LDAsMCwwLDEuOTU3LS44NTcsNC4zMTEsNC4zMTEsMCwwLDAsLjY3MS0yLjY2NSw0LjI3NCw0LjI3NCwwLDAsMC0uNjcxLTIuNjQ2LDIuNjYyLDIuNjYyLDAsMCwwLTMuOTEzLDAsNC4yNzQsNC4yNzQsMCwwLDAtLjY3MSwyLjY0Niw0LjMxMSw0LjMxMSwwLDAsMCwuNjcxLDIuNjY1QTIuMzM1LDIuMzM1LDAsMCwwLDU3LjI4NywyNy4yMThabTEwLjY0LDEuNDE2YTQuMzU4LDQuMzU4LDAsMCwxLTMuMzY0LTEuMjU4QTUuMTc1LDUuMTc1LDAsMCwxLDYzLjQsMjMuNzM0YTUuMTgzLDUuMTgzLDAsMCwxLDEuMi0zLjY2Miw0LjQxLDQuNDEsMCwwLDEsMy40LTEuMyw1LjQyMSw1LjQyMSwwLDAsMSwxLjAyNS4wOTMsNi4zMzEsNi4zMzEsMCwwLDEsLjk1LjI2MS41MzIuNTMyLDAsMCwxLC4zLjIuNzA1LjcwNSwwLDAsMSwuMDc1LjM2M3YuNXEwLC4zNzMtLjI0Mi4zNzNhMS4yOTIsMS4yOTIsMCwwLDEtLjMtLjA1Niw2Ljc3MSw2Ljc3MSwwLDAsMC0uNzQ1LS4xNTgsNS4xLDUuMSwwLDAsMC0uOC0uMDY1LDIuODQ3LDIuODQ3LDAsMCwwLTIuMjU1Ljc5MiwzLjgsMy44LDAsMCwwLS42ODksMi41MjV2LjI0MmEzLjcsMy43LDAsMCwwLC43LDIuNDg4LDIuOCwyLjgsMCwwLDAsMi4yMDguNzkyLDYuMDA1LDYuMDA1LDAsMCwwLDEuNjc3LS4yNjEsMS4zMTEsMS4zMTEsMCwwLDEsLjI4LS4wNTZxLjI0MiwwLC4yNDIuMzczdi41YS40ODcuNDg3LDAsMCwxLS4zNzMuNTU5QTUuMzU3LDUuMzU3LDAsMCwxLDY3LjkyNywyOC42MzVabTYuODk1LjA3NWE3LjIzNiw3LjIzNiwwLDAsMS0yLjgxNC0uNTIyLjYyNC42MjQsMCwwLDEtLjMxNy0uMjE0LjY2MS42NjEsMCwwLDEtLjA3NS0uMzQ1di0uNTIycTAtLjMzNS4yMjQtLjMzNUEuOTUzLjk1MywwLDAsMSw3MiwyNi43OWEyLjEwNSwyLjEwNSwwLDAsMSwuMzA3LjA5Myw4LjM2OSw4LjM2OSwwLDAsMCwyLjU1My4zOTFxMS44NjMsMCwxLjg2My0xLjM3OWEuOTY2Ljk2NiwwLDAsMC0uMjg5LS43MjcsMy4xMTksMy4xMTksMCwwLDAtMS4wNTMtLjU1OWwtMS41ODQtLjZBMi43LDIuNywwLDAsMSw3MS43MjksMjEuNGEyLjM3NiwyLjM3NiwwLDAsMSwuOTQxLTEuOTU3LDMuODYsMy44NiwwLDAsMSwyLjQ2OS0uNzQ1LDYuOTE2LDYuOTE2LDAsMCwxLDEuMjIxLjExMiw2LjA0NCw2LjA0NCwwLDAsMSwxLjE0Ni4zMTcuNTcuNTcsMCwwLDEsLjMyNi4yLjY0OS42NDksMCwwLDEsLjA4NC4zNTR2LjVxMCwuMzM1LS4yNDIuMzM1YTEuNjY3LDEuNjY3LDAsMCwxLS40MjktLjA5Myw2LjkyNyw2LjkyNywwLDAsMC0yLjAxMy0uM3EtMS43ODksMC0xLjc4OSwxLjIxMWExLDEsMCwwLDAsLjMuNzY0LDMuODgzLDMuODgzLDAsMCwwLDEuMTc0LjYxNWwxLjQ1NC41NTlhMy42ODIsMy42ODIsMCwwLDEsMS41OTMsMS4wMjUsMi4zNDYsMi4zNDYsMCwwLDEsLjQ3NSwxLjUwOSwyLjU2MywyLjU2MywwLDAsMS0uOTc4LDIuMUE0LjA2OSw0LjA2OSwwLDAsMSw3NC44MjIsMjguNzA5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAzMC41NjMgMTAyMCkiIGZpbGw9IiNmNWY3ZjkiLz4KICA8L2c+Cjwvc3ZnPgo="  alt="atoz.Amazon">
+              </a>
+              
+
+              <a class="nav-link" onclick="window.open('https://atoz.amazon.work');"><img src="https://df8afm2f7g138.cloudfront.net/assets/assets_logo-9cf72e8ab50167f748d4e7b5ab8ec97e1f25683c27bf6c435ee97b084cd41bde.svg"  alt="atoz.Amazon"></a>
+              
+              <a class="nav-link" onclick="window.open('https://issues.labcollab.net/secure/Dashboard.jspa')">
+                <img src="https://issues.labcollab.net/s/-ploqfo/820012/11nzao1/_/images/jira-software.png" alt="Jira">
+                 <!-- <p style="margin: 0;">Jira</p> -->
+              </a>
+            
+              <a class="nav-link" style="display: flex; margin-top: 5px;"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><h6 style="margin-bottom: 0px; ">Tools</h6>&nbsp; <img class="chat-gpt" style="border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKxQtTU1gcLtYCYf5HR850kZ5fwGF5dJaVw&s" alt=""></a>
+            
+              
+              <!-- <a class="nav-link mx-auto disabled" aria-disabled="true">Disabled</a> -->
+            
+            
+            </div>
+            <a class="nav-link Help ms-auto"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" ><p>Help <i class="fa-solid fa-circle-question"></i></p></a>
+          </div>
+        </div>
+      </nav>
+
+
+
+      
+
+      <section class="LMT">
+
+        
+  
+
+
+ 
+
+        <!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+  <!-- Then put toasts within -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+
+        <aside class="ass-lmt">
+          <article class="heading">
+            <h1>LMT Essentials <img src="img-src/icons8-rabbit.gif" height="30px" style="cursor: context-menu;"  alt=""></h1>
+          </article>
+          <article class="body">
+            
+
+            <a href="" class="btn button-26"onclick="window.open('https://coral.amazon.com/RabbitTestManager/Gamma/explorer');"><b>RTM</b></a>
+            
+
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://www.epochconverter.com/');"><b>Epoch Timestamp</b></a>
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://amazon.awsapps.com/workdocs-preview/index.html#/folder/dfd71a21196e685ab86e8bd21281b3f1d9cae07c83f1ec33bb7a9709f17a7c2f');"><b>Daily Built (Workdocs)</b></a>
+            <a href="quipStop.html" class="btn button-26" type="button"><b>Quip Stop</b></a>
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://www.the-qrcode-generator.com/');"><b>QR Code</b></a>
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://w.amazon.com/bin/view/Fake_Order_JSON');"><b>Fake Order Json</b></a>
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://quip-amazon.com/GdfDAnz2juzu/IN-Complete-Test-Data');"><b>IN Quip</b></a>
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://receive-sms-free.cc/');"><b>Fake Phone No</b></a>
+
+
+
+            <div class="dropdown" style="height: 100%">
+              <button class="btn button-26  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>TR Creation</b>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onclick="window.open('https://flextools-na-gamma-iad-jlb-iad.iad.proxy.amazon.com/generateOrder.do');"><b>NA</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="window.open('https://flextools-eu-gamma-dub-jlb-dub.dub.proxy.amazon.com/generateOrder.do');"><b>EU & IN</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="window.open('-https://flextools-jp-gamma-pdx-jlb-pdx.pdx.proxy.amazon.com/generateOrder.do');"><b>JP</b></a></li>
+              </ul>
+            </div>
+
+
+            
+            <a href="" class="btn button-26" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a>
+
+          </article>
+        </aside>
+        
+
+
+        
+
+
+        <aside class="ass-am">
+          <article class="heading">
+            <h1> <img class="smile" src="https://atoz-preboarding-app.amazon.work/static/media/smile-mobile.3705a5b9.prod.svg" style="cursor: context-menu;" alt=""> Essentials</h1>
+          </article>
+          <article class="body">
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://mytime-lite.aka.corp.amazon.com/wfc/applications/suitenav/navigation.do?ESS=true?redirect=/wfc/applications/wtk/html/ess/timestamp.jsp');"><b>Kronos</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://amzlqa-testrail.last-mile.amazon.dev/index.php?/milestones/view/3966');"><b>Testrail</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://prod.idms.gdq.amazon.dev/#');"><b>IDMS</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://timesheet.qs.gdq.amazon.dev/timesheet/dashboard');"><b>Timesheet</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://phonetool.amazon.com/');"><b>Phonetool</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://atoz.amazon.work/time');"><b>Time off & leave</b></a>
+            <!-- <a href="" class="btn button-26" type="button" onclick="window.open('https://atoz.amazon.work/');"><b>AtoZ</b></a> -->
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://us2.concursolutions.com/home');"><b>Reimbersment</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://www.allsechro.com/AmazonSSO/');"><b>Pay</b></a>
+            <!-- <a href="" class="btn button-26" type="button" onclick="window.open('https://knet.csod.com/ui/lms-learner-home/home?');"><b>Knet</b></a> -->
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://password-v2.corp.amazon.com/');"><b>Password Tool</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://inside.amazon.com/en/Pages/default.aspx');"><b>Inside Amazon</b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('https://atoz.amazon.work/myhr?');"><b>My HR</b></a>
+            <a href="" class="btn button-26" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a>
+
+          </article>
+        </aside>
+
+
+
+
+
+        
+
+        <!-- <aside>
+          <article class="heading">
+            <h1>-------------------</h1>
+          </article>
+          <article class="body">
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+            <a href="" class="btn btn-success"><b>dummy</b></a>
+          </article>
+        </aside> -->
+
+
+        <!-- <aside class="dummy"></aside>enecccdjgvftgggghveglfegnjinjcrkljlfelnhnehu
+         enecccdjgvftritelurcnlnkiglfhfncucnfgkelikcg
+          -->
+
+
+          <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button> -->
+
+        <!-- <button class="button-26" role="button">Button 26</button> -->
+
+      </section>
+      <!-- <section class="dummy"></section> -->
+
+
+      
+
+
+
+
+      
+
+
+
+
+
+      <!-- Backend HTML 
+       ------------
+       -----------
+       ----------
+       ----------->
+
+
+
+
+
+       <!-- Alert Modal -->
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Third-Party Generative AI use Alert ⚠</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <H6>Amazon Third-Party Generative AI use Policy prohibits sharing confidential information unless you obtain required approvals.</H6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn alert-btn btn-danger" data-bs-dismiss="modal"><h6>Close</h6></button>
+          <button type="button" class="btn alert-btn btn-success"  data-bs-target="#toolModal"   type="button" id="liveToastBtn-tool" data-bs-toggle="modal" data-bs-target="#toolModal"><h6>Understood</h6></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-- suggestion model ------------->
+
+<div class="modal fade text-light" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Suggestion for New Buttons</h1>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" id="form">
+
+          <input type="hidden" name="access_key" value="893f2719-7d2e-4cfc-9cc3-8f756b82ffd7">
+      
+          <!-- <input type="text" name="name" required> -->
+           <label for="name"><div ><p>Your Alieas : <i title="Your Login is optional"><i class="fa-solid fa-circle-exclamation"></i></i></p></div></label>
+          <input type="name" placeholder="Your Login" name="email" >
+          <label for="message">Your Suggestions :</label>
+          <textarea placeholder="Example: Adding this Button would be very Useful..." name="message" required></textarea>
+          <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
+      
+      
+          <button type="submit" class="btn btn-warning  mx-auto" style="border-radius: 10px;">Send Your Suggestions 🙂</button>
+          <div id="result"></div>
+      
+      </form>
+     
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- Tool Modal ---------------->
+
+
+<div class="modal  fade" id="toolModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tools <i class="fa-solid fa-screwdriver-wrench"></i></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="tool-ul">
+          <li class="item-link" onclick="window.open('https://quillbot.com/paraphrasing-tool')"> <img class="tool-link-icon" src="https://i.pinimg.com/736x/3a/f2/84/3af284fafb581a4796bce36c09c2816d.jpg"  alt="">&nbsp;&nbsp; <p>QuillBot</p></li><br>
+          <li class="item-link" onclick="window.open('https://chatgpt.com/')"> <img  class="tool-link-icon" src="https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png" alt="">&nbsp;&nbsp; <p> Chat-GPT</p></li><br>
+          <li class="item-link" onclick="window.open('https://gemini.google.com/')"><img  class="tool-link-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr7qrIazsvZwJuw-uZCtLzIjaAyVW_ZrlEQ&s" alt="">&nbsp;&nbsp; <p>Gemini</p></li><br>
+          <li class="item-link" onclick="window.open('https://www.google.com/')"><img  class="tool-link-icon" src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png" alt="">&nbsp;&nbsp; <p>Google</p></li><br>
+          <!-- <li class="item-link" onclick="window.open('')"></li> -->
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Help offcanva --------------------->
+
+<div class="offcanvas help-canva offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Needed Help !? 🙂</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body offcanvas-body-help">
+    <h6>Contact the Developer <i class="fa-brands fa-connectdevelop"></i></h6>
+    <br>
+    <ul>
+      <a href="" onclick="window.open('https://slack.com/app_redirect?channel=@ramjaas')"><li><p><i class="fa-brands fa-slack"></i> Slack Me</p></li></a>
+      <a href="" onclick="window.open('https://app.chime.aws/conversations/new?email=ramjaas@amazon.com')"><li><p><i class="fa-brands fa-amazon"></i> Chime Me</p></li></a>
+      <a href="" onclick="window.open('mailto:ramjaas@amazon.com')"><li><p><i class="fa-regular fa-envelope"></i> Email</p></li></a>
+      <a href="" onclick="window.open('tel: +91 7305790119')"><li><p><i class="fa-solid fa-phone"></i> +91 7305790119</p></li></a>
+      <br><br><br>
+      <a href="" onclick="window.open('https://github.com/Ram24102002/LMT_Dashboard')"><h5 style="color: black;"><i class="fa-brands fa-github"></i> &nbsp;Source Code</i></h5></a>
+      
+    </ul>
+ <button style="background-color: transparent;" onclick="callToast()" id="liveToastBtn" class="position-absolute bottom-0 translate-middle end-0"><i class="fa-brands fa-bots"></i> Chat Bot  <span style="padding: 0; margin-bottom: 5px;" class="badge text-bg-primary">beta</span> </button>
+    
+    
+   
+  </div>
+</div>
+
+
+
+
+<!-- Toste code ---------------->
+
+
+<!-- <button type="button"  class="btn btn-primary" onclick="callToast()" id="liveToastBtn">Show live toast</button> -->
+<div class="toast-container position-fixed bottom-50 end-50  p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img style="height: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RD-D6qOKEzNbsWfnBUjSfQv4GYF3jBJloA&s" class="rounded me-2" alt="...">
+      <strong class="me-auto">Chat Bot</strong>
+      <small>Just Now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Chat Bot is Still in Development Stage. <br>
+      Will be deployed in Next Update...
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
