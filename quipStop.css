@@ -26,8 +26,8 @@ html{
     }
     
     body{
+        /* height: 100vh; */
         width: 100%;
-        height: 100vh;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -204,6 +204,7 @@ article
   
   .button-26:hover {
     background-color: #ffffff;
+    color: black;
     border: solid black;
     }
   
@@ -274,4 +275,24 @@ aside:hover
 
 
 
+}
+
+
+/* phone view */
+
+@media all and (max-width:468px)
+{
+    html
+    {
+        height: 190vh;
+        overflow: scroll;
+    }
+    body{
+        position:absolute;
+    }
+    .navbar-brand p
+    {
+        font-size: 45px;
+        margin-left: 50px;
+    }
 }
