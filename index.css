@@ -319,6 +319,10 @@ article
     .ass-lmt{
         margin-top: 10px;
     }
+    .navbar-nav a img
+{
+    height: 18px;
+}
 
     .alert-dismissible
 {
@@ -369,7 +373,7 @@ section
 }
 *
 {
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .button-26
@@ -382,8 +386,23 @@ section
 
 
 
+
+/* phone view */
+
 @media all and (max-width:468px)
 {
+
+    body
+    {
+        height: 100dvh;
+    }
+
+
+    .LMT
+    {
+        margin-top: 100px;
+    }
+
     .btn
 {
     height: 75px;
@@ -393,6 +412,10 @@ section
 }
 
 *
+{
+    overflow: hidden;
+}
+body
 {
     overflow: scroll;
 }
