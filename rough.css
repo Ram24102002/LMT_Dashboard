@@ -1,0 +1,10 @@
+section{
+    height: 100dvh;
+    width: 100%;
+}
+
+img{
+    background-color: rgb(141, 141, 141);
+    justify-content: space-evenly;
+    
+}
