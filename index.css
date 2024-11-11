@@ -150,6 +150,15 @@ body
 
 
 
+#offcanvasQuipstop
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
 section
 {
     /* height: 700px; */
@@ -452,6 +461,265 @@ section
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* Quipstop CSS */
+
+
+#offcanvasQuipstop2 , #offcanvasWikiStop ,#offcanvasWikiStop2
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+.fa-arrow-left
+{
+    font-size: 90px;
+}
+
+#offcanvasQuipstopLabel , #offcanvasWikistopLabel
+{
+    font-size: 50px;
+}
+
+.quipimg
+{
+    height: 50px;
+    rotate: 90deg;
+}
+
+.wikiimg
+{
+    height: 120px;
+    rotate: 90deg;
+}
+
+section
+{
+    height: 85vh;
+}
+
+article
+{
+    height: 450px;
+    width: 1200px;
+    /* background-color: black; */
+    transition: .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* article:hover
+{
+    height: 350px;
+    width: 1230px;
+    border-radius: 10px;
+    background-color: #000000;
+} */
+
+.btn-main
+{
+    height: 100px;
+    width: 170px;
+    background-color: #FFFFFF;
+    margin: 20px;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 0;
+    border: solid black 2px;
+    transition: .3s;
+}
+
+.btn-main:hover
+{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.btn-main p
+{
+    font-size: 18px;
+    margin: 0;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+}
+
+
+.modal-dialog
+{
+    border: 0;
+    box-shadow: #FFFFFF 0px 0px 10px 0px ;
+}
+
+.alert-btn
+{
+    height: 30px;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+.button-26 {
+    
+
+    appearance: button;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    /* border-radius: 4px; */
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-size: 14px;
+    /* line-height: 1.15; */
+    overflow: visible;
+    padding: 12px 16px;
+    position: relative;
+    /* text-align: center; */
+    text-transform: none;
+    transition: all 80ms ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* width: fit-content; */
+    display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .button-26:disabled {
+    opacity: .5;
+  }
+  
+  .button-26:focus {
+    outline: 0;
+  }
+  
+  .button-26:hover {
+    background-color: #ffffff;
+    color: black;
+    border: solid black;
+    }
+  
+  .button-26:active {
+    background-color: #000000;
+    ;
+  }
+
+  
+  
+#form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 260px;
+}
+
+#form input
+{
+    border-radius: 5px;
+    height: 35px;
+}
+
+input 
+{
+    padding: 0px 0px 0px 15px;
+}
+textarea
+{
+    padding: 0px 0px 0px 15px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.modal-dialog
+{
+    border: 0;
+    box-shadow: #FFFFFF 0px 0px 10px 0px ;
+}
+
+.offcanvas-header-H
+{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    writing-mode: vertical-lr;
+}
+
+.text-arrow
+{
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+    /* z-index: -1; */
+}
+
+.square
+{
+    z-index: 9999;
+}
+
+.btn-close
+{
+    z-index: 9999;
+}
+
+
+
+
+
+/* lap screen */
+@media all and (max-width:1400px)
+{
+
+.offcanvas-header-H
+{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    writing-mode: vertical-lr;
+}
+
+/* .text-arrow
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+} */
+
+#offcanvasQuipstopLabel
+{
+    margin-left: -2px;
+}
+
+.fa-arrow-left
+{
+    margin-left: 50px;
+    display: visible;
+}
+
+
+}
 
 
 
