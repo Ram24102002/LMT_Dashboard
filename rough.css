@@ -11,6 +11,15 @@ section
     background: linear-gradient(black,white);
 }
 
+
+
+#qrcode
+{
+    height: 200px;
+    width: 200px;
+    background-color: aliceblue;
+}
+
 ::-webkit-scrollbar
 {
     display: none;

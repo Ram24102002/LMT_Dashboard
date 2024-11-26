@@ -19,6 +19,10 @@
     <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RD-D6qOKEzNbsWfnBUjSfQv4GYF3jBJloA&s">
     <link rel="stylesheet" href="index.css">
     <title>LMT Dashboard</title>
+
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
 </head>
 <body>
  
@@ -111,7 +115,7 @@
             <a href="" class="btn button-26" type="button"  onclick="window.open('https://amazon.awsapps.com/workdocs-preview/index.html#/folder/dfd71a21196e685ab86e8bd21281b3f1d9cae07c83f1ec33bb7a9709f17a7c2f');"><b>Daily Build (Workdocs)</b></a>
             <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuipstop" aria-controls="offcanvasQuipstop"><b>Quip Stop</b></a>
             <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWikiStop" aria-controls="offcanvasWikiStop"><b>Wiki Library</b></a>
-            <a href="" class="btn button-26" type="button"  onclick="window.open('https://www.the-qrcode-generator.com/');"><b>QR Code</b></a>
+            <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#QR-Model" aria-controls="QR-Model"><b>QR Code</b></a>
             <a href="" class="btn button-26" type="button"  onclick="window.open('https://w.amazon.com/bin/view/Fake_Order_JSON');"><b>Fake Order Json</b></a>
             <a href="" class="btn button-26" type="button"  onclick="window.open('https://receive-sms-free.cc/');"><b>Fake Phone No</b></a>
 
@@ -128,9 +132,9 @@
               </ul>
             <!-- </div> -->
 
-
             
-            <a href="" class="btn button-26" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a>
+         
+            <!-- <a href="" class="btn button-26" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a> -->
 
           </article>
         </aside>
@@ -160,7 +164,7 @@
             <a href="" class="btn button-26" type="button" onclick="window.open('https://inside.amazon.com/en/Pages/default.aspx');"><b>Inside Amazon</b></a>
             <a href="" class="btn button-26" type="button" onclick="window.open('https://ingenii.corp.amazon.com/');"><b>Ingenii</b></a>
             <a href="" class="btn button-26" type="button" onclick="window.open('https://atoz.amazon.work/myhr?');"><b>My HR</b></a>
-            <a href="" class="btn button-26" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a>
+            <!-- <a href="" class="btn button-26" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a> -->
             <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
               Button with data-bs-target
             </button> -->
@@ -174,36 +178,7 @@
 
         
 
-        <!-- <aside>
-          <article class="heading">
-            <h1>-------------------</h1>
-          </article>
-          <article class="body">
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-            <a href="" class="btn btn-success"><b>dummy</b></a>
-          </article>
-        </aside> -->
-
-
-        <!-- <aside class="dummy"></aside>enecccdjgvftgggghveglfegnjinjcrkljlfelnhnehu
-         enecccdjgvftritelurcnlnkiglfhfncucnfgkelikcg
-          -->
-
-
-          <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button> -->
-
-        <!-- <button class="button-26" role="button">Button 26</button> -->
-
       </section>
-      <!-- <section class="dummy"></section> -->
 
 
       
@@ -294,6 +269,35 @@
        ----------->
 
 
+
+
+
+
+<!-- QR Offcanvas ------------------------------------------------------------------------------------------------->
+
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="QR-Model" aria-labelledby="QR-Model-label">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title" id="QR-Model-label">QR Generaton <i class="fa-solid fa-qrcode"></i></h1>
+    <button type="button" class="btn-close QR-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" id="QR-offcanvas-body">
+    <aside class="QR-input-aside">
+      <textarea type="textarea" id="QR-input"> </textarea>
+    </aside>
+    <aside class="QR-aside">
+      <div id="qrcode">
+        <i class="fa-sharp fa-solid fa-qrcode" id="QR-placeholder"></i>
+      </div>
+    </aside>
+    
+  </div>
+</div>
+
+
+<!-- --------------------------------------------------------------------------------------------- QR Offcanvas---->
+
+
        
 
        <!-- QuipStop ---------------------------------------------------------------------------------------------------------------->
@@ -322,7 +326,7 @@
             <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/o6x7AZ7I7wba/Gavel-Testing')"><P>Gavel Testing Quip</P></div>
             <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/GxvAANoHVSBw/Gavel-Safe-place')"><P>Gavel & Safe place Quip</P></div>
             <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/IRUIA5gsx7m9/Garage-Overview-and-Test-Data')"><P>Garage</P></div>
-            <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/fAxnA0pZV7oC/Translation-Testing-Locale-Country-Details')"><P>Translation Quip</P></div>
+            <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/fAxnA0pZV7oC/Translation-Testing-Locale-Country-Details')"><P>Translation & Flag Quip</P></div>
             <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/blBFACNSlYst/Lumos-Testing-Address-IDAccounts#temp:C:TGd71d7fe8ff9344671b185cda86')"><P>Lumos Testing Quip</P></div>
             <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/BNGPAlpk63jK/Polaroid-Working-Address-IDs#temp:C:dFPcd6a8dfdf1b645a7a41c30d3e')"><P>Polaroid</P></div>
             <div class="btn btn-main" onclick="window.open('https://quip-amazon.com/r5vuAEIwb0hg/KODAK-TEST-DATA')"><P>KODAK TEST DATA</P></div>
@@ -333,8 +337,7 @@
 
             <a href="" class="btn button-26 btn-main" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuipstop2" aria-controls="offcanvasQuipstop2"><b>Next Page > </b></a>
 
-            <!-- <a href="" class="btn button-26 btn-main" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a> -->
-
+            
 
 
 
@@ -404,7 +407,7 @@
           <div class="btn btn-main" onclick="window.open('')"><P>Empty</P></div>
           <div class="btn btn-main" onclick="window.open('')"><P>Empty</P></div>
           <div class="btn btn-main" onclick="window.open('')"><P>Empty</P></div>
-          <a href="" class="btn button-26 btn-main" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a>
+          <a href="" class="btn button-26 btn-main" type="button"  ><b>+</b></a>
 
 
 
@@ -485,8 +488,7 @@
 
             <a href="" class="btn button-26 btn-main" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWikiStop2" aria-controls="offcanvasWikiStop2"><b>Next Page</b></a>
 
-            <!-- <a href="" class="btn button-26 btn-main" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a> -->
-
+            
 
 
 
@@ -558,7 +560,7 @@
           <div class="btn btn-main" onclick="window.open('')"><P>Empty</P></div>
           <div class="btn btn-main" onclick="window.open('')"><P>Empty</P></div>
           <div class="btn btn-main" onclick="window.open('')"><P>Empty</P></div>
-          <a href="" class="btn button-26 btn-main" type="button"   data-bs-toggle="modal" data-bs-target="#exampleModal" ><b>+</b></a>
+          <a href="" class="btn button-26 btn-main" type="button" ><b>+</b></a>
 
 
 
@@ -637,38 +639,6 @@
 
 
 
-<!-- suggestion model ------------->
-
-<div class="modal fade text-light" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content bg-dark">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Suggestion for New Buttons</h1>
-        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form method="POST" id="form">
-
-          <input type="hidden" name="access_key" value="893f2719-7d2e-4cfc-9cc3-8f756b82ffd7">
-      
-          <!-- <input type="text" name="name" required> -->
-           <label for="name"><div ><p>Your Alieas : <i title="Your Login is optional"><i class="fa-solid fa-circle-exclamation"></i></i></p></div></label>
-          <input type="name" placeholder="Your Login" name="email" >
-          <label for="message">Your Suggestions :</label>
-          <textarea placeholder="Example: Adding this Button would be very Useful..." name="message" required></textarea>
-          <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
-      
-      
-          <button type="submit" class="btn btn-warning  mx-auto" style="border-radius: 10px;">Send Your Suggestions 🙂</button>
-          <div id="result"></div>
-      
-      </form>
-     
-    </div>
-  </div>
-</div>
-</div>
-
 
 
 
@@ -691,12 +661,11 @@
           <li class="item-link" onclick="window.open('https://chatgpt.com/')"> <img  class="tool-link-icon" src="https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png" alt="">&nbsp;&nbsp; <p> Chat-GPT</p></li><br>
           <li class="item-link" onclick="window.open('https://gemini.google.com/')"><img  class="tool-link-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr7qrIazsvZwJuw-uZCtLzIjaAyVW_ZrlEQ&s" alt="">&nbsp;&nbsp; <p>Gemini</p></li><br>
           <li class="item-link" onclick="window.open('https://www.google.com/')"><img  class="tool-link-icon" src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png" alt="">&nbsp;&nbsp; <p>Google</p></li><br>
-          <!-- <li class="item-link" onclick="window.open('')"></li> -->
+          
         </ul>
       </div>
       <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button> -->
+        
       </div>
     </div>
   </div>
@@ -756,7 +725,7 @@
 
 
 
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="index.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
