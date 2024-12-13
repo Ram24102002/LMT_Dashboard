@@ -3,27 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+      
+/* QR ----------------------------- */
+
+#qrcode
+{
+    height: 260px;
+    width: 260px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body
+{
+    height: 100dvh; 
+    width: 100%;
+    background-color: #e2e1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#QR-body
+{
+  height: 300px;
+  width: 100%;
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#QR-aside
+{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.QR-input-aside
+{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.QR-input
+{
+    border: #000000 solid;
+    height: 120px;
+    width: 800px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#QR-placeholder
+{
+    font-size: 100px;
+}
+
+
+    </style>
+
+
+
+
     <title>Document</title>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
 </head>
 <body>
     
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="QR-Model" aria-labelledby="QR-Model-label">
-    <div class="offcanvas-header">
-      <h1 class="offcanvas-title" id="QR-Model-label">QR Generaton <i class="fa-solid fa-qrcode"></i></h1>
-      <button type="button" class="btn-close QR-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<Section class="QR-body" id="QR-body">
+
+  <aside class="QR-input-aside">
+    <textarea type="textarea" placeholder="Paste Text Here " class="QR-input"></textarea>
+  </aside>
+
+  <aside class="QR-aside">
+    <div id="qrcode">
+      <!-- <i class="fa-sharp fa-solid fa-qrcode" id="QR-placeholder"></i> -->
     </div>
-    <div class="offcanvas-body" id="QR-offcanvas-body">
-      <aside class="QR-input-aside">
-        <textarea type="textarea" id="QR-input"> </textarea>
-      </aside>
-      <aside class="QR-aside">
-        <div id="qrcode">
-          <i class="fa-sharp fa-solid fa-qrcode" id="QR-placeholder"></i>
-        </div>
-      </aside>
-      
-    </div>
-  </div>
+  </aside>
+
+</Section>
   
+
+
+
+<script>
+  
+// QR GENERATOR
+
+document.querySelector('.QR-input').addEventListener('input', function() {
+  document.getElementById('qrcode').innerHTML = ""; // Use the correct string ID
+  Hi(); // Trigger the Hi() function
+});
+
+function Hi() {
+  var inputElement = document.querySelector('.QR-input');
+  var inputValue = inputElement.value;
+
+  // Ensure the 'qrcode' element exists before proceeding
+  if (document.getElementById('qrcode')) {
+      new QRCode(document.getElementById('qrcode'), inputValue); // Generate QR Code
+  }
+}
+
+</script>
 </body>
 </html>

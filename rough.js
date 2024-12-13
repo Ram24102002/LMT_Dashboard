@@ -1,118 +1,87 @@
-document.getElementById('input').addEventListener('input', function() {
-    document.getElementById('qrcode').innerHTML = ""; // Use the correct string ID
-    Hi(); // Trigger the Hi() function
-});
+var dropdown = document.getElementById('dropdown');
+const oss1 = document.getElementById('OSS1');
+const oss2 = document.getElementById('OSS2');
+const oss3 = document.getElementById('OSS3');
+var input =document.getElementById('input');
 
-function Hi() {
-    var inputElement = document.getElementById('input');
-    var inputValue = inputElement.value;
 
-    // Ensure the 'qrcode' element exists before proceeding
-    if (document.getElementById('qrcode')) {
-        new QRCode(document.getElementById('qrcode'), inputValue); // Generate QR Code
+function OSS(){
+    // console.log("hi")
+    if(dropdown.value == oss1.value )
+    {
+        input.innerHTML= myVariable + myVariableOssTwo +  "}";
+
+  
+  console.log(myVariable);  // Output the string
+  
+        
     }
+    else if(dropdown.value == oss2.value )
+        {
+            input.innerHTML= myVariableOssTwo + "}";
+    
+      
+      console.log(myVariableOssTwo);  // Output the string
+      
+            
+        }
+        else if(dropdown.value == oss3.value )
+          {
+              input.innerHTML= myVariableOssTwo + "}";
+      
+        
+        console.log(myVariableOssTwo);  // Output the string
+        
+              
+          }
+    else
+    {
+        console.log("No")
+    }
+
+
 }
 
 
 
-
-// function Hi(){
-//     var inputElement= document.getElementById('input')
-//     var inputValue=inputElement.value;
+// JSON object
+const ossOne = {
     
-//     new QRCode(qrcode, inputValue );
-// }
+}
+        
 
-
-// document.getElementById('input').addEventListener('input', function(){
-    
-    
-//         document.getElementById(qrcode).innerHTML = "";
-//         Hi();
-    
-// })
+    // Convert JSON to string
+    const jsonString = JSON.stringify(ossOne,null,4);
+    let myVariable = jsonString;
 
 
 
 
 
 
+    // JSON object
+const ossTwo = {
 
-// var nestedArr=[[1,2,3],[4,5,6],[7,8,9]]
+    "deliveryWindow": {
+      "deliveryDay": 0,
+      "hourSlot": 1,
+      "minutes": 0,
+      "serviceType": "NEXT_HOUR"
+    },
+    "numOfTRs": 1,
+    "trObjectAttribute": "NORMAL",
+    "transportRequestType": "EXECUTION",
+    "alcoholDelivery": "NO_ALCOHOL",
+    "clientAccountId": "COMP",
+    "destinationAddressId": "RWBMQ373YV7OEMAVILVEG12Z637WC8N8ZA2DZ8N8CW736ZNPXTQ2EIA2OXLG5557",
+    "originAddressId": "",
+    "validatecall": true
+  };
+  
+  // Convert JSON to string
+  const jsonStringOssTwo = JSON.stringify(ossTwo,null,4);
+  let myVariableOssTwo = jsonStringOssTwo;
 
-// for(var i=0;i<nestedArr.length; i++)
-// {
-//     for(var j=0;j<arr[i].length; j++)
-//         {
-
-//             product*=arr[i][j];
-//             console.log(product);
-//         }
-// }
-
-
-
-// myArray =[1,2,3,4,5];
-// saveArr=0;
-// for(var i=0;i<myArray.length;i++)
-// {
-//     saveArr+=myArray[i];
-    
-// };
-
-
-// console.log(saveArr);
-
-
-
-
-
-// myArray =[];
-
-// for(var i=1;i<=5;i+=2)
-// {
-//     myArray.push(i);
-// };
-
-// console.log(myArray);
-
-
-
-
-// function lookup(val){
-//     var result ="";
-   
-// var object = {
-//     "name":"ram",
-//     "age":18
-// };
-
-// result = object[val];
-// return result;
-
-// // var b= object.age;
-// // console.log(b);
-
-// // object['color']="green";
-
-// // console.log(object.color);
-
-
-
-// }
-// console.log(lookup("name"));
-
-
-    
-
-// var input = document.getElementById('input');
-
-// var a = Number(input.value);
-// var b;
-// var c;
-// function add(b){
-//     c=a+b
-//     console.log(c)
-//     return c;
-// }
-// add(5);
+//   console.log(myVariableOssTwo);
+  
+  

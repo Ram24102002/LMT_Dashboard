@@ -6,16 +6,22 @@
 
     <link rel="stylesheet" href="rough.css">
     <title>Document</title>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-    </script>
+    
 </head>
 <body>
-    <section>
-        <textarea type="text" id="input"></textarea>
-        <button id="submit">Submit</button>
-        <div id="qrcode"></div>
-    </section>
+
+    <Section>
+        <select id="dropdown" type="dropdown">
+                <option id="Default">Select</option>
+                <option id="OSS1">OSS for 1</option>
+                <option id="OSS2">OSS for 2</option>
+                <option id="OSS3">OSS for 3</option>
+        </select>
+        <button onclick="OSS()">Submit</button>
+        <textarea id="input"></textarea>
+    </Section>
+
+
 
     <script src="rough.js"></script>
 </body>

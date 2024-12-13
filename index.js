@@ -42,23 +42,6 @@ function SecurityAlert(){
 
 
 
-// QR GENERATOR
-
-document.getElementById('QR-input').addEventListener('input', function() {
-  document.getElementById('qrcode').innerHTML = ""; // Use the correct string ID
-  Hi(); // Trigger the Hi() function
-});
-
-function Hi() {
-  var inputElement = document.getElementById('QR-input');
-  var inputValue = inputElement.value;
-
-  // Ensure the 'qrcode' element exists before proceeding
-  if (document.getElementById('qrcode')) {
-      new QRCode(document.getElementById('qrcode'), inputValue); // Generate QR Code
-  }
-}
-
 
 
 
