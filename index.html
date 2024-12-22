@@ -109,13 +109,13 @@
             <a href="" class="btn button-26"onclick="window.open('https://coral.amazon.com/RabbitTestManager/Gamma/explorer');"><b>RTM</b></a>
             
 
-            <a href="" class="btn button-26" type="button"  onclick="window.open('Timstamp.html');"><b>Epoch Timestamp</b></a>
+            <a href="" class="btn button-26" type="button"  data-bs-toggle="modal" data-bs-target="#TimestampModal" id="Timestamp-button"><b>Timestamp Converter <i class="fa-solid fa-stopwatch"></i></b></a>
             <a href="" class="btn button-26" type="button"  onclick="window.open('https://amazon.awsapps.com/workdocs-preview/index.html#/folder/dfd71a21196e685ab86e8bd21281b3f1d9cae07c83f1ec33bb7a9709f17a7c2f');"><b>Daily Build Path</b></a>
             <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuipstop" aria-controls="offcanvasQuipstop"><b>Quip Stop <i class="fa-solid fa-comment"></i></b></a>
-            <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWikiStop" aria-controls="offcanvasWikiStop"><b>Wiki Library</b></a>
-            <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#QR-Model" aria-controls="QR-Model"><b>QR Code  <i class="fa-solid fa-qrcode"></i></b></a>
+            <a href="" class="btn button-26" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWikiStop" aria-controls="offcanvasWikiStop"><b>Wiki Library <i class="fa-brands fa-wikipedia-w"></i></b></a>
+            <a href="" class="btn button-26" type="button" onclick="window.open('QR.html')" id="QR-button"><b>QR Code  <i class="fa-solid fa-qrcode"></i></b></a>
             <a href="" class="btn button-26" type="button"  onclick="window.open('https://w.amazon.com/bin/view/Fake_Order_JSON');"><b>Fake Order Json</b></a>
-            <a href="" class="btn button-26" type="button"  onclick="window.open('https://receive-sms-free.cc/');"><b>Fake Phone No</b></a>
+            <a href="" class="btn button-26" type="button"  onclick="window.open('https://receive-sms-free.cc/');"><b>Fake Phone No <i class="fa-solid fa-phone"></i></b></a>
 
 
 
@@ -271,22 +271,53 @@
 
 
 
-<!-- QR Offcanvas ------------------------------------------------------------------------------------------------->
+<!-- Timestamp Offcanva ------------------------------------------------------------------------------------------------->
+
+<!-- Button trigger modal -->
 
 
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="QR-Model" aria-labelledby="QR-Model-label">
-  <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="QR-Model-label">QR Generaton <i class="fa-solid fa-qrcode"></i></h1>
-    <button type="button" class="btn-close QR-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<!-- Modal -->
+<div class="modal fade" id="TimestampModal" tabindex="-1" aria-labelledby="TimestampModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="TimestampModalLabel">Timestamp Converter <i class="fa-solid fa-stopwatch"></i></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <section class="Timestamp-section">
+          <article class="Timestamp-article">
+              
+              <div>
+                  <label for="">Timestamp:</label>
+      <input type="text"  id="timestamp-output">
+              </div>
+              <div>
+                  <label for="">Timestamp +5 Min:</label>
+      <input type="text"  id="timestamp-5-output">
+              </div>
+              <div>
+                  <label for="">Timestamp +10 Min:</label>
+      <input type="text"  id="timestamp-10-output"><br>
+              </div>
+              <div>
+                  <button id="timestamp-submit" onclick="timestampCreator()">Reset Timestamp</button>
+  
+      <!-- <button id="close" onclick="closeWindow()">close</button> -->
+              </div>
+  
+      
+          </article>
+      </section>
+      </div>
+      <div id="Timestamp-footer">
+       
+      </div>
+    </div>
   </div>
-  <div class="offcanvas-body" id="QR-offcanvas-body">
-    
-    
-  </div>
-</div>
+</div> 
 
-
-<!-- --------------------------------------------------------------------------------------------- QR Offcanvas---->
+<!-- --------------------------------------------------------------------------------------------- Timestamp Offcanva---->
 
 
        

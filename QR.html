@@ -1,123 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <style>
-      
-/* QR ----------------------------- */
+        /* QR ----------------------------- */
 
-#qrcode
-{
-    height: 260px;
-    width: 260px;
-    background-color: #FFFFFF;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+        *
+        {
+            overflow-x: hidden;
+        }
+        header
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-body
-{
-    height: 100dvh; 
-    width: 100%;
-    background-color: #e2e1e1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        #toggleDiv
+        {
+            position: fixed;
+            right: 70px;
+            top: 40px;
+        }
 
-#QR-body
-{
-  height: 300px;
-  width: 100%;
-  display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+        #qrcode {
+            height: 260px;
+            width: 260px;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-#QR-aside
-{
-    height: 100%;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        body {
+            width: 100%;
+            background-color: #ffaa32;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-.QR-input-aside
-{
-    height: 100%;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.QR-input
-{
-    border: #000000 solid;
-    height: 120px;
-    width: 800px;
-    font-size: 12px;
-    padding: 10px;
-}
+        #create-btn
+        {
+          height: 40px;
+          width: 150px;
+          position: fixed;
+          bottom: 20px;
+          left: 10px;
+          background-color: blueviolet;
+        }
 
-#QR-placeholder
-{
-    font-size: 100px;
-}
+        .QR-Article {
+            height: 150px;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
+        #QR-aside {
+            height: 100%;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .QR-input-aside {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .QR-input {
+            border: #000000 solid;
+            height: 120px;
+            width: 700px;
+            font-size: 12px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #QR-placeholder {
+            font-size: 100px;
+        }
+        .qrcode-container
+        {
+            height: 130px;
+            width: 130px;
+        }
+        .qrcode-container :hover
+        {
+            opacity: 1;
+        }
+        .qrcode-container img
+        {
+          height: 130px;
+          background-color: blue;
+          transform: rotate(10px);
+          transition: .5s;
+        }
     </style>
 
-
-
-
-    <title>Document</title>
-    <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-    </script>
+   <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/qr-scan-icon-2048x2048-aeh36n7y.png">
+    <title>QR Generate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
-    
-<Section class="QR-body" id="QR-body">
+    <header>
+        <h1>QR Generator</h1>
+        <div class="form-check form-switch" id="toggleDiv">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Blur</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="toggle">
+          </div>
+          
+    </header>
+<button id="create-btn" onclick="createQRDiv()">Add a QR Section</button>
 
-  <aside class="QR-input-aside">
-    <textarea type="textarea" placeholder="Paste Text Here " class="QR-input"></textarea>
-  </aside>
+<section>
+  <article class="QR-Article">
+    <aside class="QR-input-aside">
+        <textarea type="textarea" placeholder="Paste Text Here" class="QR-input"></textarea>
+    </aside>
+    <aside class="QR-aside">
+        <div class="qrcode-container">
+            <!-- QR Code will be generated here -->
+        </div>
+    </aside>
+</article>
+</section>
 
-  <aside class="QR-aside">
-    <div id="qrcode">
-      <!-- <i class="fa-sharp fa-solid fa-qrcode" id="QR-placeholder"></i> -->
-    </div>
-  </aside>
 
-</Section>
-  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 
+
+
+<!-- Script ---------------------------------------------------------------------------------------------- -->
 <script>
-  
-// QR GENERATOR
 
-document.querySelector('.QR-input').addEventListener('input', function() {
-  document.getElementById('qrcode').innerHTML = ""; // Use the correct string ID
-  Hi(); // Trigger the Hi() function
-});
+// Add QR Section
+function createQRDiv() {
+    const newDiv = document.createElement('section');
+    newDiv.classList.add('QR-body');
+    newDiv.innerHTML = `
+        <article class="QR-Article">
+            <aside class="QR-input-aside">
+                <textarea type="textarea" placeholder="Paste Text Here" class="QR-input"></textarea>
+            </aside>
+            <aside class="QR-aside">
+                <div class="qrcode-container">
+                    <!-- QR Code will be generated here -->
+                </div>
+            </aside>
+        </article>
+    `;
+    document.body.appendChild(newDiv);
+    
 
-function Hi() {
-  var inputElement = document.querySelector('.QR-input');
-  var inputValue = inputElement.value;
+    // Attach event listener to the newly added textarea
+    const newInput = newDiv.querySelector('.QR-input');
+    const qrCodeContainer = newDiv.querySelector('.qrcode-container');
 
-  // Ensure the 'qrcode' element exists before proceeding
-  if (document.getElementById('qrcode')) {
-      new QRCode(document.getElementById('qrcode'), inputValue); // Generate QR Code
-  }
+    // Listen for input and generate QR Code
+    newInput.addEventListener('input', function () {
+        qrCodeContainer.innerHTML = ""; // Clear previous QR code
+        generateQRCode(newInput.value, qrCodeContainer);
+    });
+    notify();
 }
 
+// Function to generate QR Code
+function generateQRCode(text, container) {
+    if (text) {
+        new QRCode(container, text); // Generate QR Code inside the container
+    }
+}
+
+// Initially generate QR code for the first input field if it already has text
+window.addEventListener('DOMContentLoaded', function () {
+    const firstInput = document.querySelector('.QR-input');
+    const firstQRCodeContainer = document.querySelector('.qrcode-container');
+
+    if (firstInput && firstQRCodeContainer) {
+        generateQRCode(firstInput.value, firstQRCodeContainer);
+    }
+
+    // Attach input event listener for the first textarea
+    firstInput.addEventListener('input', function () {
+        firstQRCodeContainer.innerHTML = ""; // Clear previous QR code
+        generateQRCode(firstInput.value, firstQRCodeContainer);
+    });
+});
+
+
+
+// Notification---------------
+
+function notify() {
+    console.log('notify() function called'); // Debugging log
+
+    // Create the notification
+
+    const notification = document.createElement('div');
+    notification.id = 'notify';
+    notification.innerHTML = 'A QR Section Added'; // Change this to whatever message you want
+
+    // Styling the notification
+    notification.style.color = 'white';
+    notification.style.backgroundColor = 'gray';
+    notification.style.padding = '13px';
+    notification.style.borderRadius = '5px';
+    notification.style.border = 'none';
+    notification.style.position = 'fixed';
+    notification.style.right = '20px';
+    notification.style.bottom = '20px';
+    notification.style.display= 'flex';
+    notification.style.justifyContent='center';
+    notification.style.alignItems='center';
+
+    // Append to footer
+    document.querySelector('body').appendChild(notification);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+
+
+// Blur Toggle--------------------------------------------------------------------------------------
+
+const toggleButton = document.querySelector('#toggle');
+const qrcodeContainer = document.querySelector('.qrcode-container')
+
+toggleButton.addEventListener('change', () => {
+    if (toggleButton.checked) {
+        console.log('checked');
+        qrcodeContainer.style.opacity= '-1';
+    } else {
+        console.log('unchecked');
+        
+        qrcodeContainer.style.opacity= '1';
+    }
+});
+
+qrcodeContainer.addEventListener("mouseover", (event) => {
+    qrcodeContainer.style.opacity= '1';
+});
+
+
+//------------------------------------------------------------------------------------- Blur Toggle--
+
+
+
 </script>
+
 </body>
 </html>
