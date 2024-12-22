@@ -717,7 +717,7 @@ input
 {
     border-radius: 8px;
     width: 110px;
-    border: solid black;
+    border: solid black; 
     padding: 5px;
 }
 #timestamp-submit
