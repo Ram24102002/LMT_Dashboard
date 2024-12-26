@@ -15,11 +15,17 @@
         }
         header
         {
+            height: 100px;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow: hidden;
+        }
+        header h1
+        {
+            overflow: hidden;
         }
 
         #toggleDiv
@@ -40,7 +46,7 @@
 
         body {
             width: 100%;
-            background-color: #ffaa32;
+            background-color: rgb(107,125,123);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -55,6 +61,7 @@
           bottom: 20px;
           left: 10px;
           background-color: blueviolet;
+          border-color: #000000;
         }
 
         .QR-Article {
@@ -106,7 +113,6 @@
         .qrcode-container img
         {
           height: 130px;
-          background-color: blue;
           transform: rotate(10px);
           transition: .5s;
         }
