@@ -2,6 +2,7 @@
 
 
 
+
 function callToast() {
   const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
@@ -148,3 +149,17 @@ function notify() {
 // ---------------------------------------------------------------------------------- Timestamp -------
 
 
+
+
+
+
+// Close Quipstop -----------------------------------------------------------------------------------------
+
+const QuipStopBtn=document.querySelector('.QuipStop-btn');
+const offcanvasQuipstop=document.querySelector('#offcanvasQuipstop');
+
+QuipStopBtn.addEventListener('click', function(){
+  offcanvasQuipstop.close();
+})
+
+// ---------------------------------------------------------------------------------- Close Quipstop -------
